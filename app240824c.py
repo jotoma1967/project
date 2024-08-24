@@ -69,7 +69,7 @@ def index():
     #fecha_actualizacion = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     # Renderiza la plantilla con la fecha actual
         print("linea 49 ", fecha_actualizacion,"**************************************")
-        return render_template('index.html', fecha_actualizacion=fecha_actualizacion)
+        #return render_template('index.html', fecha_actualizacion=fecha_actualizacion)
 '''
 if __name__ == '__app240824b__':
     
@@ -79,8 +79,8 @@ if __name__ == '__app240824b__':
     ##app.run(debug=True)
     app.run()
 '''
-if True: #__name__ == '__false__':
-    
+if True: #__name__ == '__main__':
+    render_template('index.html', fecha_actualizacion=fecha_actualizacion)
     print ("linea 84   *****************************")
     index()
     print("linea 86 ",fecha_actualizacion)
