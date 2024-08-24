@@ -35,6 +35,14 @@ except ImportError:
 
     from flask import  current_app
 
+try:
+    import  waitress
+except ImportError:
+     
+    pip.main(["install","waitress"])
+
+    import  waitress
+
 
 from flask import Flask, render_template
 from datetime import datetime
