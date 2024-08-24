@@ -79,14 +79,14 @@ if __name__ == '__app240824b__':
     ##app.run(debug=True)
     app.run()
 '''
-if __name__ == '__app240824c__':
+if True: #__name__ == '__false__':
     
     print ("linea 84   *****************************")
     index()
     print("linea 86 ",fecha_actualizacion)
     ##app.run(debug=True)
     ##from waitress import serve
-    serve(app, host="0.0.0.0", port = 10000)#0.0.0.0", port=10000)
+    ##serve(app, host="0.0.0.0", port = 10000)#0.0.0.0", port=10000)
 
     print("linea 90 **********************")
     app.run()
