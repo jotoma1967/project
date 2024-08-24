@@ -86,7 +86,7 @@ if __name__ == '__main__':
     print("linea 86 ",fecha_actualizacion)
     ##app.run(debug=True)
     ##from waitress import serve
-    serve(app, host="https://project-jpuo.onrender.com/templates/index.html", port = 10000)#0.0.0.0", port=10000)
+    serve(app, host="0.0.0.0", port = 10000)#0.0.0.0", port=10000)
 
     print("linea 90 **********************")
     app.run()
