@@ -43,8 +43,16 @@ except ImportError:
 
     import  waitress
 
+try:
+    from  waitress import serve
+except ImportError:
+     
+    pip.main(["install","serve"])
 
-from flask import Flask, render_template
+    import  serve
+
+
+#from flask import Flask, render_template
 from datetime import datetime
 
 app = Flask(__name__)
@@ -77,7 +85,7 @@ if __name__ == '__main__':
     index()
     print("linea 70 ",fecha_actualizacion)
     ##app.run(debug=True)
-    from waitress import serve
+    ##from waitress import serve
     serve(app, host="https://project-jpuo.onrender.com/templates/index.html", port = 10000)#0.0.0.0", port=10000)
     app.run()
     #from waitress import serve
