@@ -69,5 +69,5 @@ if __name__ == '__main__':
     index()
     print("linea 70 ",fecha_actualizacion)
     ##app.run(debug=True)
-    app.run(debug=True)
+    app.run()
 
