@@ -79,7 +79,7 @@ if __name__ == '__app240824b__':
     ##app.run(debug=True)
     app.run()
 '''
-if __name__ == '__main__':
+if __name__ == '__app240824c__':
     
     print ("linea 84   *****************************")
     index()
