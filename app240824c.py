@@ -89,6 +89,9 @@ def index():
     # Renderiza la plantilla con la fecha actual
         print("linea 49 ", fecha_actualizacion,"**************************************")
         return render_template('index.html', fecha_actualizacion="suerte")
+
+index()
+
 '''
 if __name__ == '__app240824b__':
     
