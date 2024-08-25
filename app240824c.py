@@ -108,8 +108,8 @@ def data():
             'nombre': 'Juan',
             'edad': 30
         })
-data()
-##app.run()
+#data()
+app.run()
 '''
 @app.route('/')
 def index():
