@@ -79,16 +79,16 @@ print("linea 46 ",fecha_actualizacion,"****************************")
 @app.route('/')
 def index():
     with app.app_context():
-        g.user = "exito"
+        ##g.user = "exito"
         # Puedes acceder a `current_app` y otras funcionalidades aquí
         print("Nombre de la aplicación:", current_app.name)
 
-        print("variable g ", g.user)
+        ##print("variable g ", g.user)
     # Obtén la fecha y hora actual
     #fecha_actualizacion = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     # Renderiza la plantilla con la fecha actual
         print("linea 49 ", fecha_actualizacion,"**************************************")
-        return render_template('index.html', fecha_actualizacion=g.user) ##fecha_actualizacion)
+        return render_template('index.html', fecha_actualizacion="suerte")
 '''
 if __name__ == '__app240824b__':
     
@@ -98,7 +98,7 @@ if __name__ == '__app240824b__':
     ##app.run(debug=True)
     app.run()
 '''
-if True: #__name__ == '__main__':
+if __name__ == '__main__':
     #before_request()
     print ("linea 84   *****************************")
     index()
@@ -111,4 +111,4 @@ if True: #__name__ == '__main__':
     print("linea 90 **********************")
     app.run()
     #from waitress import serve
-    serve(app, host="0.0.0.0", port=10000)
+    ##serve(app, host="0.0.0.0", port=10000)
