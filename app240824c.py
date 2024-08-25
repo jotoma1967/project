@@ -90,7 +90,7 @@ def index():
         print("linea 49 ", fecha_actualizacion,"**************************************")
         return render_template('index.html', fecha_actualizacion="suerte")
 
-serve(app, host="123.45.67.89", port = 10000)
+serve(app, host="0.0.0.0", port = 10000)
 index()
 ##app.run()
 
