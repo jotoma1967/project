@@ -44,6 +44,14 @@ except ImportError:
     import  g
 
 try:
+    from  flask import url_for
+except ImportError:
+     
+    pip.main(["install","url_for"])
+
+    import  url_for
+
+try:
     import  waitress
 except ImportError:
      
