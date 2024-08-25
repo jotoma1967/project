@@ -70,7 +70,7 @@ fecha_actualizacion = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 @app.before_request
 def before_request():
-    g.fecha = 'Usuario'
+    g.user = 'Usuario'
 
 
 
@@ -80,11 +80,13 @@ def index():
     with app.app_context():
         # Puedes acceder a `current_app` y otras funcionalidades aquí
         print("Nombre de la aplicación:", current_app.name)
+
+        print("variable g ", g.user)
     # Obtén la fecha y hora actual
     #fecha_actualizacion = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     # Renderiza la plantilla con la fecha actual
         print("linea 49 ", fecha_actualizacion,"**************************************")
-        return render_template('index.html', fecha_actualizacion=g.fecha) ##fecha_actualizacion)
+        return render_template('index.html', fecha_actualizacion=g.user) ##fecha_actualizacion)
 '''
 if __name__ == '__app240824b__':
     
@@ -95,7 +97,7 @@ if __name__ == '__app240824b__':
     app.run()
 '''
 if True: #__name__ == '__main__':
-    before_request()
+    #before_request()
     print ("linea 84   *****************************")
     index()
     print("linea 86 ",fecha_actualizacion)
