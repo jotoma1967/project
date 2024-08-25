@@ -106,9 +106,10 @@ def data():
     with app.app_context():
         return jsonify({
             'nombre': 'Juan',
-            'edad': 30
+            'edad': 30,
+            'uno':fecha_actualizacion
         })
-#data()
+data()
 app.run()
 '''
 @app.route('/')
