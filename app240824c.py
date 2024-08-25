@@ -90,17 +90,11 @@ def index():
         print("linea 49 ", fecha_actualizacion,"**************************************")
         return render_template('index.html', fecha_actualizacion="suerte")
 
+serve(app, host="123.45.67.89", port = 10000)
 index()
-app.run()
+##app.run()
 
 '''
-if __name__ == '__app240824b__':
-    
-    print ("linea 54    *****************************")
-    index()
-    print("linea 59 ",fecha_actualizacion)
-    ##app.run(debug=True)
-    app.run()
 
 if __name__ == '__main__':
     #before_request()
