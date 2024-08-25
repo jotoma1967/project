@@ -36,6 +36,14 @@ except ImportError:
     from flask import  current_app
 
 try:
+    from  flask import g
+except ImportError:
+     
+    pip.main(["install","g"])
+
+    import  g
+
+try:
     import  waitress
 except ImportError:
      
@@ -59,6 +67,13 @@ app = Flask(__name__)
  
 fecha_actualizacion = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
+
+@app.before_request
+def before_request():
+    g.fecha = 'Usuario'
+
+
+
 print("linea 46 ",fecha_actualizacion,"****************************")
 @app.route('/')
 def index():
@@ -69,8 +84,7 @@ def index():
     #fecha_actualizacion = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     # Renderiza la plantilla con la fecha actual
         print("linea 49 ", fecha_actualizacion,"**************************************")
-def prueba():    
-    return render_template('index.html', fecha_actualizacion=fecha_actualizacion)
+        return render_template('index.html', fecha_actualizacion=g.fecha) ##fecha_actualizacion)
 '''
 if __name__ == '__app240824b__':
     
@@ -85,7 +99,7 @@ if True: #__name__ == '__main__':
     print ("linea 84   *****************************")
     index()
     print("linea 86 ",fecha_actualizacion)
-    prueba()
+    
     ##app.run(debug=True)
     ##from waitress import serve
     ##serve(app, host="0.0.0.0", port = 10000)#0.0.0.0", port=10000)
