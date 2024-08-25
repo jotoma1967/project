@@ -64,7 +64,7 @@ except ImportError:
 from datetime import datetime
 
 app = Flask(__name__)
-##app = Flask(__name__, template_folder='templates')
+app = Flask(__name__, template_folder='templates')
  
 fecha_actualizacion = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -91,6 +91,7 @@ def index():
         return render_template('index.html', fecha_actualizacion="suerte")
 
 index()
+app.run()
 
 '''
 if __name__ == '__app240824b__':
