@@ -3,17 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Mi Página</title>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+          fetch('/data')
+              .then(response => response.json())
+              .then(data => {
+                  document.getElementById('nombre').innerText = data.nombre;
+                  document.getElementById('edad').innerText = data.edad;
+              });
+      });
+  </script>
 </head>
 <body>
-    <h1>Hola, mundo!</h1>
-    <p>Última actualización: ya me voy a acostaar {{fecha_actualizacion}}</p>
-    <p>Última actualización: {{ fecha_actualizacion }}</p>
-    <p>Última actualización: {{ fecha_actualizacion }}</p>
-    <script src="{{ url_for('static', filename='js/archivosimple.js') }}"></script>
-    <script>
+   <h1>Nombre: <span id="nombre"></span></h1>
+   <p>Edad: <span id="edad"></span></p>   
+   <h1>Hola, mundo!</h1>
+   <p>Última actualización: ya me voy a acostaar {{uno}}</p>
+   <p>Última actualización: {{ uno }}</p>
+   <p>Última actualización: {{ uno }}</p>
+   <script src="{{ url_for('static', filename='js/archivosimple.js') }}"></script>
+   <script>
       console.log("esto va bien pruebaotravez");
       console.log(1967);
-      console.log(fecha_actualizacion);
+      console.log(uno);
    </script>
 
 
