@@ -63,8 +63,8 @@ except ImportError:
 #from flask import Flask, render_template
 from datetime import datetime
 
-#app = Flask(__name__)
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__)
+##app = Flask(__name__, template_folder='templates')
  
 fecha_actualizacion = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -109,6 +109,6 @@ if __name__ == '__main__':
     ##serve(app, host="123.45.67.89", port = 10000)#0.0.0.0", port=10000)
 
     print("linea 90 **********************")
-    app.run()
+    app.run(debug=True)
     #from waitress import serve
     ##serve(app, host="0.0.0.0", port=10000)
