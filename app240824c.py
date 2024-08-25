@@ -95,7 +95,7 @@ if __name__ == '__app240824b__':
     app.run()
 '''
 if True: #__name__ == '__main__':
-    
+    before_request()
     print ("linea 84   *****************************")
     index()
     print("linea 86 ",fecha_actualizacion)
