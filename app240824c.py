@@ -92,6 +92,14 @@ def before_request():
 '''
 
 print("linea 46 ",fecha_actualizacion,"****************************")
+
+@app.route('/data')
+def data():
+    return jsonify({
+        'nombre': 'Juan',
+        'edad': 30
+    })
+'''
 @app.route('/')
 def index():
     with app.app_context():
@@ -104,10 +112,10 @@ def index():
     #fecha_actualizacion = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     # Renderiza la plantilla con la fecha actual
         print("linea 49 ", fecha_actualizacion,"**************************************")
-        return render_template('index.html', fecha_actualizacion="suerte")
-
+        return render_template('index.html', ufecha_actualizacion="suerte")
+'''
 ##serve(app, host="0.0.0.0", port = 10000)
-index()
+#index()
 ##app.run()
 
 '''
