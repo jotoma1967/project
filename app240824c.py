@@ -103,10 +103,11 @@ print("linea 46 ",fecha_actualizacion,"****************************")
 
 @app.route('/data')
 def data():
-    return jsonify({
-        'nombre': 'Juan',
-        'edad': 30
-    })
+    with app.app_context():
+        return jsonify({
+            'nombre': 'Juan',
+            'edad': 30
+        })
 data()
 ##app.run()
 '''
