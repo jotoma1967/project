@@ -69,6 +69,7 @@ def index():
     #fecha_actualizacion = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     # Renderiza la plantilla con la fecha actual
         print("linea 49 ", fecha_actualizacion,"**************************************")
+def prueba():    
     return render_template('index.html', fecha_actualizacion=fecha_actualizacion)
 '''
 if __name__ == '__app240824b__':
@@ -84,6 +85,7 @@ if True: #__name__ == '__main__':
     print ("linea 84   *****************************")
     index()
     print("linea 86 ",fecha_actualizacion)
+    prueba()
     ##app.run(debug=True)
     ##from waitress import serve
     ##serve(app, host="0.0.0.0", port = 10000)#0.0.0.0", port=10000)
