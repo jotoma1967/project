@@ -81,7 +81,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 #app = Flask(__name__, template_folder='templates')
-app.config['SERVER_NAME'] = '123.45.67.89'
+app.config['SERVER_NAME'] = 'https://project-jpuo.onrender.com'
 app.config['APPLICATION_ROOT'] = '/'
 app.config['PREFERRED_URL_SCHEME'] = 'https'
 
