@@ -79,7 +79,7 @@ app.config['PREFERRED_URL_SCHEME'] = 'https'
 
 # Simulate URL building outside of request context
 with app.app_context():
-    print(url_for('index.html'))
+    #print(url_for('index.html'))
     print("linea 75 ********************")
 
 fecha_actualizacion = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
