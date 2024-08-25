@@ -64,8 +64,16 @@ except ImportError:
 from datetime import datetime
 
 app = Flask(__name__)
-app = Flask(__name__, template_folder='templates')
- 
+#app = Flask(__name__, template_folder='templates')
+app.config['SERVER_NAME'] = '123.45.67.89'
+app.config['APPLICATION_ROOT'] = '/'
+app.config['PREFERRED_URL_SCHEME'] = 'https'
+
+# Simulate URL building outside of request context
+with app.app_context():
+    print(url_for('index'))
+    print("linea 75 ********************")
+
 fecha_actualizacion = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 '''
