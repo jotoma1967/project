@@ -111,4 +111,4 @@ if True: #__name__ == '__main__':
     print("linea 90 **********************")
     app.run()
     #from waitress import serve
-    ##serve(app, host="0.0.0.0", port=10000)
+    serve(app, host="0.0.0.0", port=10000)
