@@ -67,17 +67,18 @@ app = Flask(__name__)
  
 fecha_actualizacion = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-
+'''
 @app.before_request
 def before_request():
     g.user = 'Usuario'
 
-
+'''
 
 print("linea 46 ",fecha_actualizacion,"****************************")
 @app.route('/')
 def index():
     with app.app_context():
+        g.user = "exito"
         # Puedes acceder a `current_app` y otras funcionalidades aquí
         print("Nombre de la aplicación:", current_app.name)
 
