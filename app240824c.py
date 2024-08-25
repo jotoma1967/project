@@ -91,7 +91,7 @@ def index():
         return render_template('index.html', fecha_actualizacion="suerte")
 
 index()
-##app.run()
+app.run()
 
 '''
 if __name__ == '__app240824b__':
