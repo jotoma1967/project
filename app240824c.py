@@ -110,7 +110,8 @@ def data():
             'uno':fecha_actualizacion
         })
 data()
-app.run()
+##
+# app.run()
 '''
 @app.route('/')
 def index():
