@@ -52,6 +52,14 @@ except ImportError:
     import  url_for
 
 try:
+    from  flask import jsonify
+except ImportError:
+     
+    pip.main(["install","jsonify"])
+
+    import  jsonify
+
+try:
     import  waitress
 except ImportError:
      
